@@ -1,0 +1,129 @@
+all Tables have unique id
+
+fk = Foreign Key
+
+
+TABLE 1 - USER_PROFILE !users
+               
+1) user_name 
+2) email_address ***MISSING
+3) password
+4) first_name
+5) last_name
+6) phone_number
+
+--------------------------------------------------------------------------------------------------------------------------------
+TABLE 2 - SIMCHA_PREFERENCES !simchas
+
+1) fk_user_profile_id
+2) name ***MISSING
+3) state/location
+4) zip
+5) date_preference_specific
+
+-----------------------------------------------------------------------------------------------------------------------------------
+TABLE 3 - SAVED_SEARCH !savedSearches
+
+1) fk_simcha_preferences_id
+2) fk_vendor_profile_id
+
+----------------------------------------------------------------------------------------------------------------------------------------
+TABLE 4 - SAVED_CART !cart
+
+1) fk_simcha_preferences_id
+2) fk_vendor_profile_id
+3) pending - bool
+
+------------------------------------------------------------------------------------------------------------------------------------------
+TABLE 5 - FINAL_ORDER !orders
+
+1) fk_simcha_preferences_id
+2) fk_vendor_profile_id
+3) order_date_time
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+TABLE 6 - VENDOR_PROFILE  !vendorProfiles               
+
+1) user_name 
+2) email_address
+3) password
+4) first_name
+5) last_name
+6) phone_number
+7) service
+8) confirmation_timer
+9) about_service
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLE 7 - HALLS !halls
+                 
+1) fk_vendor_profile_id
+2) name
+3) street
+4) address
+5) city
+6) state
+7) zip
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+TABLE 8 - VENDORS !vendorInfo
+                 
+1) fk_vendor_profile_id
+2) zip
+3) radius
+4) nation_wide
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLE 9 - VENDOR_AVAILABILITY !vendorAvailability
+
+1) fk_vendor_profile_id
+2) sun
+3) mon
+4) tues     
+5) wed
+6) thurs
+7) friday
+8) friday_night
+9) saturday
+10) saturday_night
+11) sefirah_first
+12) sefirah_middle ***sefiraMiddles
+13) sefirah_second
+14) three_weeks
+
+-------------------------------------------------------------------------------
+Table 10 – VENDOR_SPECIALIZED__NOT_AVAIL !vendorUnavailable
+
+1) fk_vendor_profile_id
+2) from_date
+3)  to_date
+
+-------------------------------------------------------------------------------
+Table 11 – BOOKING !booking
+
+1) fk_simcha_preferences_id
+2) date_time ***MISSING
+3) confirmation - bool
+
+-------------------------------------------------------------------------------
+TABLE 12 – VENDOR_PACKAGES !packages
+
+1)fk_vendor_profile_id
+2) description
+3) package_name
+-----------------------------------------------------------------------------------
+TABLE 13 – IMAGES !images
+
+1)fk_vendor_profile_id
+2) name
+3) primary - bool
+
+
+
+
+
+
+
+
+
+
