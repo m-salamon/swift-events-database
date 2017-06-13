@@ -23,7 +23,7 @@ TABLE 2 - SIMCHA_PREFERENCES !simchas
 
 -----------------------------------------------------------------------------------------------------------------------------------
 TABLE 3 - SAVED_SEARCH !savedSearches
-
+deger
 1) fk_simcha_preferences_id
 2) fk_vendor_profile_id
 
